@@ -10,7 +10,14 @@ public struct Hotel
 		rooms_ = rooms;
 		cost_ = cost;
 	}
-	public void Show()
+    public Hotel(Hotel hot)
+    {
+        city_ = hot.city_;
+        name_ = hot.name_;
+        rooms_ = hot.rooms_;
+        cost_ = hot.cost_;
+    }
+    public void Show()
 	{
 		Console.WriteLine("{0} {1} {2} {3:C}",city_, name_, rooms_, cost_);
 	}
